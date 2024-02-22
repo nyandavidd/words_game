@@ -34,7 +34,7 @@ class level2 extends game{
     {isRight:false,word:"Кассир"},
     {isRight:false,word:"Директор"},
     {isRight:false,word:"Администратор"},
-    {isRight:true,word:"Чебурек"},
+    {isRight:true,word:"Татра"},
     ],[{isRight:false,word:"Собака"},
     {isRight:false,word:"Кошка"},
     {isRight:false,word:"Лошадь"},
@@ -43,7 +43,7 @@ class level2 extends game{
     {isRight:false,word:"Щенок"},
     {isRight:false,word:"Котенок"},
     {isRight:false,word:"Жеребенок"},
-    {isRight:true,word:"Камаз"},
+    {isRight:true,word:"Газель"},
     ],];
      wordSpawn = document.querySelector(".word-field")
     // wordTargetContainer =document.querySelector(".words-place");
