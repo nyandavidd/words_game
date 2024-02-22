@@ -1,0 +1,102 @@
+.game-block{
+    font-size: 22px;
+    padding: 0.5em 1em;
+    border: 2px gray solid;
+    background-color: var(--block-color);
+}
+.word{
+    position: absolute;
+    font-size: 18px;
+    padding: 0.3em 0.5em;
+    border: 2px var(--border-color) solid;
+    background-color: var(--block-color);
+    color: var(--text-color);
+    text-align: center;
+    
+}
+.word-anim1{
+    animation: flicker1 5s infinite ;
+}
+
+@keyframes flicker1 {
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.word-anim2{
+    animation: flicker2 3s infinite alternate;
+}
+
+@keyframes flicker2 {
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.word-anim3{
+    animation: flicker3 2s infinite alternate;
+}
+
+@keyframes flicker3 {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.word-fly1{
+    animation: movement 2s infinite alternate,flicker1 5s infinite;
+}
+
+@keyframes movement {
+    0%{
+        transform: translate(-50px,0);
+    }
+    100%{
+        transform: translate(50px,0);
+    }
+}
+.word-fly2{
+    animation: movement 4s infinite alternate,flicker2 3s infinite alternate;
+}
+
+.word-fly3{
+    animation: movement 6s infinite alternate,flicker3 2s infinite alternate;
+}
+
+.incorrect-word{
+    background-color: var(--wrong-color);
+}
+html{
+    height: 120%;
+}
+.word-field{
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+}
