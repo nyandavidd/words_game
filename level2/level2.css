@@ -71,6 +71,7 @@
 
 .word-fly1{
     animation: movement 2s infinite alternate,flicker1 5s infinite;
+    background-color: red;
 }
 
 @keyframes movement {
@@ -83,10 +84,12 @@
 }
 .word-fly2{
     animation: movement 4s infinite alternate,flicker2 3s infinite alternate;
+    background-color: yellow;
 }
 
 .word-fly3{
     animation: movement 6s infinite alternate,flicker3 2s infinite alternate;
+    background-color: blue
 }
 
 .incorrect-word{
