@@ -15,12 +15,49 @@
     
 }
 .word-anim1{
-    animation: flicker1 5s infinite ;
+    animation: move1 5s infinite alternate;
 }
+
+@keyframes move1 {
+    0%{
+        transform: translate(-50px,0);
+
+    }
+    100%{
+        transform: translate(50px,0);
+    }
+}
+
+
+
+
+@keyframes move2 {
+    0%{
+        transform: translate(0, 50px);
+
+    }
+    100%{
+        transform: translate(0, -50px);
+    }
+}
+
+
+@keyframes move3 {
+    0%{
+        transform: translate(25px, -25px);
+
+    }
+    100%{
+        transform: translate(-25px, 25px);
+    }
+}
+
 
 @keyframes flicker1 {
     0%{
         opacity: 1;
+        transform: translate(-50px,0);
+
     }
     25%{
         opacity: 0;
@@ -30,18 +67,21 @@
     }
     100%{
         opacity: 1;
+        transform: translate(50px,0);
     }
 }
 .word-anim2{
-    animation: flicker2 3s infinite alternate;
+    animation: move2 3s infinite alternate;
 }
 
 @keyframes flicker2 {
     0%{
         opacity: 1;
+        transform: translate(-25px,-25px);
     }
     25%{
         opacity: 1;
+        transform: translate(25px,25px);
     }
     50%{
         opacity: 0;
@@ -51,7 +91,7 @@
     }
 }
 .word-anim3{
-    animation: flicker3 2s infinite alternate;
+    animation: move3 2s infinite alternate;
 }
 
 @keyframes flicker3 {
@@ -63,37 +103,32 @@
     }
     50%{
         opacity: 1;
+        transform: translate(0, 50px);
     }
     100%{
         opacity: 1;
+        transform: translate(0, -50px);
     }
 }
 
 .word-fly1{
-    animation: movement 2s infinite alternate,flicker1 5s infinite;
+    animation: flicker1 5s infinite alternate;
     border-color: red;
 }
 
-@keyframes movement {
-    0%{
-        transform: translate(-50px,0);
-    }
-    100%{
-        transform: translate(50px,0);
-    }
-}
+
 .word-fly2{
-    animation: movement 4s infinite alternate,flicker2 3s infinite alternate;
+    animation: flicker2 3s infinite alternate;
     border-color: yellow;
 }
 
 .word-fly3{
-    animation: movement 6s infinite alternate,flicker3 2s infinite alternate;
+    animation: flicker3 2s infinite alternate;
     border-color: blue
 }
 
 .incorrect-word{
-    background-color: var(--wrong-color);
+    border-color: var(--wrong-color);
 }
 html{
     height: 120%;

@@ -34,7 +34,7 @@ class level2 extends game{
     {isRight:false,word:"Кассир"},
     {isRight:false,word:"Директор"},
     {isRight:false,word:"Администратор"},
-    {isRight:true,word:"Чебурек"},
+    {isRight:true,word:"Татра"},
     ],[{isRight:false,word:"Собака"},
     {isRight:false,word:"Кошка"},
     {isRight:false,word:"Лошадь"},
@@ -43,7 +43,7 @@ class level2 extends game{
     {isRight:false,word:"Щенок"},
     {isRight:false,word:"Котенок"},
     {isRight:false,word:"Жеребенок"},
-    {isRight:true,word:"Камаз"},
+    {isRight:true,word:"Газель"},
     ],];
      wordSpawn = document.querySelector(".word-field")
     // wordTargetContainer =document.querySelector(".words-place");
@@ -113,8 +113,8 @@ class level2 extends game{
         let areaRect = this.wordSpawn.getBoundingClientRect();
         let width = word.getBoundingClientRect().width;
         let height = word.getBoundingClientRect().height;
-        word.style.left = `${Math.random() * (areaRect.width - width )}px`;
-        word.style.top = `${Math.random() * (areaRect.height - height)}px`;
+        word.style.left = `${Math.random() * (areaRect.width - width - 125 ) + 75}px`;
+        word.style.top = `${Math.random() * (areaRect.height - height - 125) + 75}px`;
     }
     setRandomMove(word){
         switch(this.getRandomNumber(0,2)){
